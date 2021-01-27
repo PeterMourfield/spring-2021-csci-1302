@@ -40,6 +40,7 @@ namespace ClassProperties
             {
                 if (value < 0)
                 {
+                    // Data validation and Error checking
                     throw new ArgumentException("Height can't be less than zero");
                 }
                 else
@@ -48,10 +49,6 @@ namespace ClassProperties
                 }
             }
         }
-
-        // Data validation and Error checking
-
-        // Construtors
 
         // read-only properties
         public bool IsOver21
@@ -71,7 +68,7 @@ namespace ClassProperties
             }
         }
 
-
+        // Construtors
         public Person()
         {
             // default constructor
@@ -79,6 +76,7 @@ namespace ClassProperties
 
         public Person(string firstname, string lastname, int age, int height)
         {
+            // Constructor with Property Parameters
             Firstname = firstname;
             Lastname = lastname;
             Age = age;
