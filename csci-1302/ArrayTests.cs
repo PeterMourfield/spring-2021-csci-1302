@@ -23,32 +23,34 @@ namespace csci_1302
                 Console.WriteLine(anArray[j]);
             }
 
-            int someNumber = 14;
-            // int result = LinearSearch(anArray, someNumber);
-            int result = BinarySearch(anArray, someNumber);
-            Console.WriteLine(string.Format("Found {0} at position {1}", someNumber, result));
+            int lookingFor = 99;
+            //int result = LinearSearch(anArray, lookingFor);
+            int result = BinarySearch(anArray, lookingFor);
+            Console.WriteLine(string.Format("found {0} at position {1}", lookingFor, result));
         }
 
-        // comparison (==) 1/10,000
-        // 142,000 items
-        // 142,000 / 10,000 = 14.2 worst case 
-        public static int LinearSearch(int[] anArray, int valueToSearchFor)
+        // 1/10,000 per comparison (==)
+        // 142,000
+        // WORST CASE = N
+        // 142,000 / 10,000  = 14.2 seconds 
+        public static int LinearSearch(int[] anArray, int someValueToFind)
         {
-            for (int k = 0; k < anArray.Length; k++)
+            for(int i = 0; i < anArray.Length; i++)
             {
-                if (valueToSearchFor == anArray[k])
-                    return k; // return index where found
+                if (someValueToFind == anArray[i])
+                    return i;
             }
-            return -1; // not found case
+
+            return -1; // not found
         }
 
-        // IMPORTANT: BinarySearch MUST BE SORTED!
+
         // int[] anArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        // comparison (==) 1/10,000
-        // 142,000 items
-        // worst case LOG n - 17 searchs        
-        // 17 / 10,000 = 
-        public static int BinarySearch(int[] anArray, int valueToSearchFor)
+        // Assumption == array is sorted
+        // 1/10,000 per comparision (==)
+        // 142,000
+        // WORST CASE = LOG(N) = 17/10,000
+        public static int BinarySearch(int[] anArray, int someValueToFind)
         {
             int mid, first = 0, last = anArray.Length - 1;
 
@@ -56,15 +58,15 @@ namespace csci_1302
             {
                 mid = (first + last) / 2;
 
-                if (valueToSearchFor > anArray[mid]) // search right half
+                if (someValueToFind > anArray[mid]) // search the right half
                     first = mid + 1;
-                else if (valueToSearchFor < anArray[mid]) // search left half
+                else if (someValueToFind < anArray[mid]) // search the left half
                     last = mid - 1;
                 else
-                    return mid;
+                    return mid; // found it
             }
 
-            return -1; // not found case
+            return -1; // not found
         }
     }
 }
