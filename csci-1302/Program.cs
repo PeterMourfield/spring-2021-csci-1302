@@ -10,7 +10,8 @@ namespace csci_1302
             // ClassPropertiesTests.Run();
             //ExceptionTests.Run();
             //Homework2.Run();
-            ArrayTests.Run();
+            // ArrayTests.Run();
+            ArrayTests2D.Run();
         }
     }
 }
