@@ -163,6 +163,7 @@ namespace csci_1302
             FourSquare board = new FourSquare();
 
             // game loop
+
             while(winner == ' ')
             {
                 board.Display();
@@ -186,5 +187,6 @@ namespace csci_1302
 
             Console.WriteLine(string.Format("{0} WON!", winner));            
         }
+        // think about how to play this using AI
     }
 }
