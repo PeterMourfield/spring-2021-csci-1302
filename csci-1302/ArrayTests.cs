@@ -8,25 +8,24 @@ namespace csci_1302
     {
         public static void Run()
         {
-            int[] anArray = new int[11];
-            //int[] anArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-            for(int i = 0; i < anArray.Length; i++)
+            int[] anArray1 = new int[10];
+            for(int i = 0; i < anArray1.Length; i++)
             {
-                anArray[i] = i * 2;
+                anArray1[i] = i * 2;
             }
 
-            // anArray[16] = 999;
-
-            for (int j = 0; j < anArray.Length; j++)
+            int[] anArray2 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            for (int j = 0; j < anArray2.Length; j++)
             {
-                Console.WriteLine(anArray[j]);
+                Console.WriteLine(anArray2[j]);
             }
 
-            int lookingFor = 99;
-            //int result = LinearSearch(anArray, lookingFor);
-            int result = BinarySearch(anArray, lookingFor);
-            Console.WriteLine(string.Format("found {0} at position {1}", lookingFor, result));
+            int lookingFor = 8;
+            int result1 = LinearSearch(anArray1, lookingFor);
+            Console.WriteLine(string.Format("Linear Search found {0} at position {1}", lookingFor, result1));
+
+            int result2 = BinarySearch(anArray2, lookingFor);
+            Console.WriteLine(string.Format("Binary Search found {0} at position {1}", lookingFor, result2));
         }
 
         // 1/10,000 per comparison (==)

@@ -1,11 +1,11 @@
 ﻿using System;
 namespace csci_1302
 {
-    public class FourSquare
+    public class ConnectFour
     {
         private char[,] squares;
 
-        public FourSquare()
+        public ConnectFour()
         {
             squares = new char[8, 8];
             Reset();
@@ -160,7 +160,7 @@ namespace csci_1302
         {
             // initialize
             char winner = ' ';
-            FourSquare board = new FourSquare();
+            ConnectFour board = new ConnectFour();
 
             // game loop
 
