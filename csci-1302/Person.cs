@@ -89,5 +89,10 @@ namespace csci_1302
         {
             return string.Format("Firstname: {0} Lastname: {1} Age: {2} Height {3}", Firstname, Lastname, Age, Height);
         }
+
+        public override bool Equals(object obj)
+        {
+            return Firstname == ((Person)obj).Firstname && Lastname == ((Person)obj).Lastname;
+        }
     }
 }

@@ -42,6 +42,35 @@ namespace csci_1302
             get { return head == null;  }
         }
 
+        public int Count
+        {
+            get
+            {
+                int _count = 0;
+
+                Node current = head;
+                while (current != null)
+                {
+                    _count++; 
+                    current = current.Next;
+                }
+                return _count;
+            }
+        }
+
+        public T Search(T lookfor)
+        {
+            Node current = head;
+            while (current != null)
+            {
+                if (current.Data.Equals(lookfor))
+                    return current.Data;
+
+                current = current.Next;
+            }
+            return default(T);
+        }
+
         // constructor
         public GenericList()
         {

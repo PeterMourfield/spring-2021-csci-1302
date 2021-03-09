@@ -25,10 +25,22 @@ namespace csci_1302
             GenericList<Person> theList = new GenericList<Person>();
             theList.AddHead(new Person("Sam", "Smith", 55, 4));
             theList.AddTail(new Person("Sally", "Smith", 35, 7));
+
+
             foreach (var item in theList)
             {
-                Console.WriteLine(item);
+                //if (item.Firstname == "Sam")
+                //{
+                //    Console.WriteLine("Found Sam");
+                //    break;
+                //}
             }
+
+            Person foundVal = theList.Search(new Person("Sam", "Smith", 55, 4));
+
+            //int foundVal = theList.Search(99);
+            Console.WriteLine(foundVal);
+
             #endregion
         }
     }
