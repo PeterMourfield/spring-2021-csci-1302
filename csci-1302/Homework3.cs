@@ -13,12 +13,16 @@ namespace csci_1302
             myList.RemoveLast();
             if (myList.Count != 0)
                 Console.WriteLine("Error in test case 1");
+            else
+                Console.WriteLine("test case 1 passed");
 
             // 2.  One Item
             myList.AddHead(5);
             myList.RemoveLast();
             if (myList.Count != 0)
                 Console.WriteLine("Error in test case 2");
+            else
+                Console.WriteLine("test case 2 passed");
 
             // 3. multiple items
             myList.AddHead(5);
@@ -27,6 +31,10 @@ namespace csci_1302
             myList.RemoveLast();
             if (myList.Count != 2)
                 Console.WriteLine("Error in test case 3");
+            else
+                Console.WriteLine("test case 3 passed");
+
+
         }
     }
 }

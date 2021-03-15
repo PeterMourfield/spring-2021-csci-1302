@@ -116,15 +116,16 @@ namespace csci_1302
         {
             if(!IsEmpty)
             {
-                if (head.Next == null)
+                Node current = head;
+                if (current.Next == null)
                     RemoveHead();
                 else
                 {
-                    Node node = head;
-                    while (node.Next.Next != null)
-                        node = node.Next;
-
-                    node.Next = null;
+                    while (current.Next.Next != null)
+                    {
+                        current = current.Next;
+                    }
+                    current.Next = null;
                 }
             }
         }
