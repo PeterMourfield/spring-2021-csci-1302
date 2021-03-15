@@ -112,6 +112,23 @@ namespace csci_1302
                 head = head.Next;
         }
 
+        public void RemoveLast()
+        {
+            if(!IsEmpty)
+            {
+                if (head.Next == null)
+                    RemoveHead();
+                else
+                {
+                    Node node = head;
+                    while (node.Next.Next != null)
+                        node = node.Next;
+
+                    node.Next = null;
+                }
+            }
+        }
+
         // this method allows us to use foreach
         public IEnumerator<T> GetEnumerator()
         {
