@@ -12,8 +12,9 @@ namespace csci_1302
             //Homework2.Run();
             //ArrayTests.Run();
             //ArrayTests2D.Run();
-            Homework3.Run();
+            //Homework3.Run();
             //InheritanceTests.Run();
+            StringTests.Run();
         }
     }
 }
