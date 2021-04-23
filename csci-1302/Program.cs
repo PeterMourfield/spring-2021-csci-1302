@@ -14,7 +14,8 @@ namespace csci_1302
             //ArrayTests2D.Run();
             //Homework3.Run();
             //InheritanceTests.Run();
-            StringTests.Run();
+            //StringTests.Run();
+            FileTests.Run();
         }
     }
 }
