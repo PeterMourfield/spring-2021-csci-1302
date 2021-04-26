@@ -14,6 +14,26 @@ namespace csci_1302
 
         static void ReadFiles()
         {
+            string fileName = "test-file.txt";
+
+            StreamReader streamReader = new StreamReader(fileName);
+            string inputLine = streamReader.ReadLine();
+            while(inputLine != null)
+            {
+                string[] values = inputLine.Split(',');
+                try
+                {
+                    int index = int.Parse(values[0]);
+                    string name = values[1];
+                    // do some work
+                }
+                catch(Exception ex)
+                {
+
+                }
+
+                inputLine = streamReader.ReadLine();
+            }
         }
 
         static void WriteFiles()
@@ -31,7 +51,7 @@ namespace csci_1302
             if (!File.Exists(fileName))
             {
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine("First line - StringBUilder");
+                sb.AppendLine("First line - StringBuilder");
                 sb.AppendLine("Last line - StringBuilfder");
 
                 // write to files
