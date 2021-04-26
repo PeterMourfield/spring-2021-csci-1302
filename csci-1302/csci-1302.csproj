@@ -6,4 +6,9 @@
     <RootNamespace>csci_1302</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="test-file.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

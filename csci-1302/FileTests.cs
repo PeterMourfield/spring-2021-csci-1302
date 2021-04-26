@@ -8,6 +8,16 @@ namespace csci_1302
     {
         public static void Run()
         {
+            // WriteFiles();
+            ReadFiles();
+        }
+
+        static void ReadFiles()
+        {
+        }
+
+        static void WriteFiles()
+        {
             //string currentDirectory = Directory.GetCurrentDirectory();
             //string newDirectory = Path.Combine(currentDirectory, "../");
             //string[] files = Directory.GetFiles(newDirectory);
@@ -33,19 +43,19 @@ namespace csci_1302
                     //writer.WriteLine("The date/time is {0}", DateTime.Now);
                     //writer.WriteLine("Last Line");
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     // handle the error
                 }
                 finally
                 {
                     writer.Close();
-                }                
+                }
             }
             else
             {
                 File.Delete(fileName);
             }
-         }
+        }
     }
 }
