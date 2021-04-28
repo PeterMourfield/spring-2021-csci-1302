@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace csci_1302
 {
@@ -15,7 +16,18 @@ namespace csci_1302
             //Homework3.Run();
             //InheritanceTests.Run();
             //StringTests.Run();
-            FileTests.Run();
+            //FileTests.Run();
+
+
+            // DotNetList
+            List<Person> personList = new List<Person>();
+            personList.Add(null);
+
+            foreach(Person person in personList)
+            {
+
+            }
+
         }
     }
 }
